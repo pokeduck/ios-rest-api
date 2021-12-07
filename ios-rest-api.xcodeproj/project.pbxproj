@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8C3B66D89F6FA6CF1726A3D4 /* Pods_ios_rest_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BA562129E36593D393DEDD /* Pods_ios_rest_api.framework */; };
+		E060A19E27548C8500CFB21E /* CodableTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A19D27548C8500CFB21E /* CodableTargetType.swift */; };
+		E060A1A027548D5700CFB21E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A19F27548D5700CFB21E /* API.swift */; };
+		E060A1A22754C68300CFB21E /* GetMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A1A12754C68300CFB21E /* GetMethod.swift */; };
+		E060A1A42754D08800CFB21E /* DeleteDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A1A32754D08800CFB21E /* DeleteDelay.swift */; };
 		E08B9E0C27548278008CCC20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0B27548278008CCC20 /* AppDelegate.swift */; };
 		E08B9E0E27548278008CCC20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0D27548278008CCC20 /* SceneDelegate.swift */; };
 		E08B9E1027548278008CCC20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0F27548278008CCC20 /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		079F0AAF774B1AFCC8D8FA12 /* Pods-ios-rest-api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-rest-api.debug.xcconfig"; path = "Target Support Files/Pods-ios-rest-api/Pods-ios-rest-api.debug.xcconfig"; sourceTree = "<group>"; };
 		70FF17F0F97A4A5B3C11D232 /* Pods-ios-rest-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-rest-api.release.xcconfig"; path = "Target Support Files/Pods-ios-rest-api/Pods-ios-rest-api.release.xcconfig"; sourceTree = "<group>"; };
+		E060A19D27548C8500CFB21E /* CodableTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTargetType.swift; sourceTree = "<group>"; };
+		E060A19F27548D5700CFB21E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E060A1A12754C68300CFB21E /* GetMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMethod.swift; sourceTree = "<group>"; };
+		E060A1A32754D08800CFB21E /* DeleteDelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDelay.swift; sourceTree = "<group>"; };
 		E08B9E0827548278008CCC20 /* ios-rest-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-rest-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08B9E0B27548278008CCC20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E08B9E0D27548278008CCC20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +90,10 @@
 			children = (
 				E08B9E0B27548278008CCC20 /* AppDelegate.swift */,
 				E08B9E0D27548278008CCC20 /* SceneDelegate.swift */,
+				E060A19D27548C8500CFB21E /* CodableTargetType.swift */,
+				E060A19F27548D5700CFB21E /* API.swift */,
+				E060A1A12754C68300CFB21E /* GetMethod.swift */,
+				E060A1A32754D08800CFB21E /* DeleteDelay.swift */,
 				E08B9E0F27548278008CCC20 /* ViewController.swift */,
 				E08B9E1127548278008CCC20 /* Main.storyboard */,
 				E08B9E142754827A008CCC20 /* Assets.xcassets */,
@@ -206,8 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E08B9E1027548278008CCC20 /* ViewController.swift in Sources */,
+				E060A19E27548C8500CFB21E /* CodableTargetType.swift in Sources */,
 				E08B9E0C27548278008CCC20 /* AppDelegate.swift in Sources */,
+				E060A1A42754D08800CFB21E /* DeleteDelay.swift in Sources */,
+				E060A1A22754C68300CFB21E /* GetMethod.swift in Sources */,
 				E08B9E0E27548278008CCC20 /* SceneDelegate.swift in Sources */,
+				E060A1A027548D5700CFB21E /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

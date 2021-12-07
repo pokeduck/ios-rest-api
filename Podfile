@@ -5,4 +5,6 @@ target 'ios-rest-api' do
   use_frameworks!
   pod 'Moya'
   pod 'Moya/RxSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
