@@ -13,19 +13,29 @@ let API = APIManager.shared
 
 class APIManager {
     static let shared = APIManager()
+    private let requestQueue = DispatchQueue.init(label: "com.yoyo.request.thread")
+    private let refreshRequestQueue = DispatchQueue.init(label: "com.yoyo.refresh.token.thread")
     private let provider = MoyaProvider<MultiTarget>(
         session: APIManager.defaultAlamofireSession(),
         plugins: [OAuthTokenPlugin(),
                   DefaultConfigurationPligun(),
                   NetworkMonitorPlugin()
                  ])
-    
+    func suspendQueue() {
+        requestQueue.suspend()
+    }
+    func resumeQueue() {
+        requestQueue.resume()
+    }
     func request<R: CodableTargetType>(_ request: R) -> Single<R.ResponseType> {
         let target = MultiTarget(request)
         let result = provider.rx
             .request(target)
+            .observeOn(ConcurrentDispatchQueueScheduler.init(queue: requestQueue))
+            .subscribeOn(MainScheduler.instance)
             .filter(statusCode: 200)
             .map(R.ResponseType.self)
+            .retry(5)
         return result
     }
     
@@ -84,6 +94,9 @@ struct NetworkMonitorPlugin: PluginType {
             
         }
         return result
+    }
+    func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
+        //API.suspendQueue()
     }
 }
 
