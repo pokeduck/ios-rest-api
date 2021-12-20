@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		8C3B66D89F6FA6CF1726A3D4 /* Pods_ios_rest_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BA562129E36593D393DEDD /* Pods_ios_rest_api.framework */; };
 		E060A19E27548C8500CFB21E /* CodableTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A19D27548C8500CFB21E /* CodableTargetType.swift */; };
-		E060A1A027548D5700CFB21E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A19F27548D5700CFB21E /* API.swift */; };
+		E060A1A027548D5700CFB21E /* MoyaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A19F27548D5700CFB21E /* MoyaAPIManager.swift */; };
 		E060A1A22754C68300CFB21E /* GetMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A1A12754C68300CFB21E /* GetMethod.swift */; };
 		E060A1A42754D08800CFB21E /* DeleteDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060A1A32754D08800CFB21E /* DeleteDelay.swift */; };
+		E077BF45277078EA003AACB2 /* Alamofire+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF44277078EA003AACB2 /* Alamofire+Promise.swift */; };
+		E077BF4727708301003AACB2 /* AFAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF4627708301003AACB2 /* AFAPIManager.swift */; };
+		E077BF49277084B0003AACB2 /* DeleteDelayAFEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF48277084B0003AACB2 /* DeleteDelayAFEndpoint.swift */; };
+		E077BF4B27709136003AACB2 /* Moya+PromiseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF4A27709136003AACB2 /* Moya+PromiseKit.swift */; };
 		E08B9E0C27548278008CCC20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0B27548278008CCC20 /* AppDelegate.swift */; };
-		E08B9E0E27548278008CCC20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0D27548278008CCC20 /* SceneDelegate.swift */; };
 		E08B9E1027548278008CCC20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0F27548278008CCC20 /* ViewController.swift */; };
 		E08B9E1327548278008CCC20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08B9E1127548278008CCC20 /* Main.storyboard */; };
 		E08B9E152754827A008CCC20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08B9E142754827A008CCC20 /* Assets.xcassets */; };
@@ -25,12 +28,15 @@
 		079F0AAF774B1AFCC8D8FA12 /* Pods-ios-rest-api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-rest-api.debug.xcconfig"; path = "Target Support Files/Pods-ios-rest-api/Pods-ios-rest-api.debug.xcconfig"; sourceTree = "<group>"; };
 		70FF17F0F97A4A5B3C11D232 /* Pods-ios-rest-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-rest-api.release.xcconfig"; path = "Target Support Files/Pods-ios-rest-api/Pods-ios-rest-api.release.xcconfig"; sourceTree = "<group>"; };
 		E060A19D27548C8500CFB21E /* CodableTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTargetType.swift; sourceTree = "<group>"; };
-		E060A19F27548D5700CFB21E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E060A19F27548D5700CFB21E /* MoyaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaAPIManager.swift; sourceTree = "<group>"; };
 		E060A1A12754C68300CFB21E /* GetMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMethod.swift; sourceTree = "<group>"; };
 		E060A1A32754D08800CFB21E /* DeleteDelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDelay.swift; sourceTree = "<group>"; };
+		E077BF44277078EA003AACB2 /* Alamofire+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Promise.swift"; sourceTree = "<group>"; };
+		E077BF4627708301003AACB2 /* AFAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFAPIManager.swift; sourceTree = "<group>"; };
+		E077BF48277084B0003AACB2 /* DeleteDelayAFEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDelayAFEndpoint.swift; sourceTree = "<group>"; };
+		E077BF4A27709136003AACB2 /* Moya+PromiseKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+PromiseKit.swift"; sourceTree = "<group>"; };
 		E08B9E0827548278008CCC20 /* ios-rest-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-rest-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08B9E0B27548278008CCC20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E08B9E0D27548278008CCC20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E08B9E0F27548278008CCC20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E08B9E1227548278008CCC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E08B9E142754827A008CCC20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +75,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E077BF4C2770960C003AACB2 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				E060A1A12754C68300CFB21E /* GetMethod.swift */,
+				E060A1A32754D08800CFB21E /* DeleteDelay.swift */,
+				E077BF48277084B0003AACB2 /* DeleteDelayAFEndpoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E077BF4D27709614003AACB2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E060A19F27548D5700CFB21E /* MoyaAPIManager.swift */,
+				E077BF4A27709136003AACB2 /* Moya+PromiseKit.swift */,
+				E077BF4627708301003AACB2 /* AFAPIManager.swift */,
+				E077BF44277078EA003AACB2 /* Alamofire+Promise.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		E08B9DFF27548278008CCC20 = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +119,9 @@
 			children = (
 				E0EAC82027675A8B00E7F6B2 /* README.md */,
 				E08B9E0B27548278008CCC20 /* AppDelegate.swift */,
-				E08B9E0D27548278008CCC20 /* SceneDelegate.swift */,
 				E060A19D27548C8500CFB21E /* CodableTargetType.swift */,
-				E060A19F27548D5700CFB21E /* API.swift */,
-				E060A1A12754C68300CFB21E /* GetMethod.swift */,
-				E060A1A32754D08800CFB21E /* DeleteDelay.swift */,
+				E077BF4D27709614003AACB2 /* Core */,
+				E077BF4C2770960C003AACB2 /* EndPoint */,
 				E08B9E0F27548278008CCC20 /* ViewController.swift */,
 				E08B9E1127548278008CCC20 /* Main.storyboard */,
 				E08B9E142754827A008CCC20 /* Assets.xcassets */,
@@ -224,10 +249,13 @@
 				E08B9E1027548278008CCC20 /* ViewController.swift in Sources */,
 				E060A19E27548C8500CFB21E /* CodableTargetType.swift in Sources */,
 				E08B9E0C27548278008CCC20 /* AppDelegate.swift in Sources */,
+				E077BF4B27709136003AACB2 /* Moya+PromiseKit.swift in Sources */,
 				E060A1A42754D08800CFB21E /* DeleteDelay.swift in Sources */,
+				E077BF45277078EA003AACB2 /* Alamofire+Promise.swift in Sources */,
 				E060A1A22754C68300CFB21E /* GetMethod.swift in Sources */,
-				E08B9E0E27548278008CCC20 /* SceneDelegate.swift in Sources */,
-				E060A1A027548D5700CFB21E /* API.swift in Sources */,
+				E077BF4727708301003AACB2 /* AFAPIManager.swift in Sources */,
+				E077BF49277084B0003AACB2 /* DeleteDelayAFEndpoint.swift in Sources */,
+				E060A1A027548D5700CFB21E /* MoyaAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -362,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.pokeduck.ios-rest-api";
@@ -380,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				INFOPLIST_FILE = "ios-rest-api/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				INFOPLIST_FILE = "ios-rest-api/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

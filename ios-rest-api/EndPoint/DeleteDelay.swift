@@ -25,3 +25,4 @@ struct DeleteDelayRequest: CodableTargetType,HttpbinHost {
     let delayTime: Int
     
 }
+

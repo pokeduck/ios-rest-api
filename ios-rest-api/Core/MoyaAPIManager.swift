@@ -9,14 +9,14 @@ import Moya
 import RxSwift
 import Alamofire
 
-let API = APIManager.shared
+let API = MoyaAPIManager.shared
 
-class APIManager {
-    static let shared = APIManager()
+class MoyaAPIManager {
+    static let shared = MoyaAPIManager()
     private let requestQueue = DispatchQueue.init(label: "com.yoyo.request.thread")
     private let refreshRequestQueue = DispatchQueue.init(label: "com.yoyo.refresh.token.thread")
-    private let provider = MoyaProvider<MultiTarget>(
-        session: APIManager.defaultAlamofireSession(),
+    private(set) var provider = MoyaProvider<MultiTarget>(
+        session: MoyaAPIManager.defaultAlamofireSession(),
         plugins: [OAuthTokenPlugin(),
                   DefaultConfigurationPligun(),
                   NetworkMonitorPlugin()
@@ -106,7 +106,7 @@ enum APIError: Error {
     case networkUnreach
 }
 
-extension APIManager {
+extension MoyaAPIManager {
     
     final class func defaultRequestMapping(for endpoint: Endpoint, closure: (Result<URLRequest, MoyaError>) -> Void) {
         do {
