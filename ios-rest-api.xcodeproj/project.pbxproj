@@ -16,6 +16,7 @@
 		E077BF4727708301003AACB2 /* AFAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF4627708301003AACB2 /* AFAPIManager.swift */; };
 		E077BF49277084B0003AACB2 /* DeleteDelayAFEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF48277084B0003AACB2 /* DeleteDelayAFEndpoint.swift */; };
 		E077BF4B27709136003AACB2 /* Moya+PromiseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF4A27709136003AACB2 /* Moya+PromiseKit.swift */; };
+		E077BF512771E392003AACB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077BF502771E392003AACB2 /* User.swift */; };
 		E08B9E0C27548278008CCC20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0B27548278008CCC20 /* AppDelegate.swift */; };
 		E08B9E1027548278008CCC20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B9E0F27548278008CCC20 /* ViewController.swift */; };
 		E08B9E1327548278008CCC20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08B9E1127548278008CCC20 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		E077BF4627708301003AACB2 /* AFAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFAPIManager.swift; sourceTree = "<group>"; };
 		E077BF48277084B0003AACB2 /* DeleteDelayAFEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDelayAFEndpoint.swift; sourceTree = "<group>"; };
 		E077BF4A27709136003AACB2 /* Moya+PromiseKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+PromiseKit.swift"; sourceTree = "<group>"; };
+		E077BF502771E392003AACB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E08B9E0827548278008CCC20 /* ios-rest-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-rest-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08B9E0B27548278008CCC20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E08B9E0F27548278008CCC20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				E060A1A12754C68300CFB21E /* GetMethod.swift */,
 				E060A1A32754D08800CFB21E /* DeleteDelay.swift */,
 				E077BF48277084B0003AACB2 /* DeleteDelayAFEndpoint.swift */,
+				E077BF502771E392003AACB2 /* User.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				E077BF4727708301003AACB2 /* AFAPIManager.swift in Sources */,
 				E077BF49277084B0003AACB2 /* DeleteDelayAFEndpoint.swift in Sources */,
 				E060A1A027548D5700CFB21E /* MoyaAPIManager.swift in Sources */,
+				E077BF512771E392003AACB2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

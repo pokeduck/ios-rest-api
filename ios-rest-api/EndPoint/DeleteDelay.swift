@@ -7,7 +7,7 @@
 
 import Moya
 
-struct DeleteDelayRequest: CodableTargetType,HttpbinHost {
+struct DeleteDelayRequest: AuthorizeCodableTargetType,HttpbinHost {
     typealias ResponseType = EmptyCodable
     
     typealias RequestType = EmptyCodable

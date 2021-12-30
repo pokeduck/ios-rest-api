@@ -6,6 +6,12 @@
 //
 
 import Moya
+protocol AuthorizeCodableTargetType: CodableTargetType, MoyaAuthorizable {}
+extension AuthorizeCodableTargetType {
+    var authorizeType: AuthorizeType {
+        .bearer
+    }
+}
 protocol CodableTargetType: TargetType {
     associatedtype ResponseType: Decodable
     associatedtype RequestType: Encodable
@@ -23,7 +29,7 @@ extension CodableTargetType {
 protocol GithubHost: TargetType {}
 extension GithubHost {
     var baseURL: URL {
-        return URL(string: "https://github.com")!
+        return URL(string: "https://api.github.com")!
     }
 }
 

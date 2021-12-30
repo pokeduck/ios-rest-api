@@ -8,7 +8,7 @@
 import Moya
 import PromiseKit
 
-func retryPromise<T>(maximumRetryCount: Int = 3, delayBeforeRetry: DispatchTimeInterval = .seconds(2), _ body: @escaping () -> Promise<T>) -> Promise<T> {
+fileprivate func retryPromise<T>(maximumRetryCount: Int = 3, delayBeforeRetry: DispatchTimeInterval = .seconds(2), _ body: @escaping () -> Promise<T>) -> Promise<T> {
     var attempts = 0
     func attempt() -> Promise<T> {
         attempts += 1
@@ -21,6 +21,11 @@ func retryPromise<T>(maximumRetryCount: Int = 3, delayBeforeRetry: DispatchTimeI
 }
 
 extension MoyaAPIManager {
+    func requestRetryPromise<R: CodableTargetType>(_ request: R,maximumRetryCount: Int = 3, delayBeforeRetry: DispatchTimeInterval = .seconds(2)) -> Promise<R.ResponseType> {
+        retryPromise(maximumRetryCount: maximumRetryCount, delayBeforeRetry: delayBeforeRetry) { [unowned self] in
+            self.requestPromise(request)
+        }
+    }
     func requestPromise<R: CodableTargetType>(_ request: R) -> Promise<R.ResponseType> {
         let target = MultiTarget(request)
         

@@ -22,28 +22,46 @@ class ViewController: UIViewController {
         
         let button = UIButton(type: .system)
         button.frame = .init(x: 100, y: 100, width: 200, height: 100)
-        button.setTitle("Rx Moya Request", for: .normal)
-
-        let result = button.rx.tap
-            .flatMap({ _ in
-                API.request(DeleteDelayRequest.init(delayTime: 7))
-            })
-            .materialize()
-        result.elements().bind { _ in
-            print("success")
-        }.disposed(by: bag)
-        result.errors().bind { error in
-            print("error")
-        }.disposed(by: bag)
+        button.setTitle("Moya Rx", for: .normal)
+        button.rx.tap
+            .bind { [unowned self] in
+                self.moya_RX()
+            }
+            .disposed(by: bag)
+//        let result = button.rx.tap
+//            .flatMap({ _ in
+//                API.request(UserEndpoint.init()).asObservable().materialize()
+//            })
+//        result.elements().bind { _ in
+//            print("success")
+//        }.disposed(by: bag)
+//        result.errors().bind { error in
+//            print("error")
+//        }.disposed(by: bag)
         
         view.addSubview(button)
         
         let button2 = UIButton(type: .system)
-        button2.frame = .init(x: 100, y: 200, width: 200, height: 100)
-        button2.setTitle("Promise Request", for: .normal)
+        button2.frame = .init(x: 100, y: 200, width: 250, height: 100)
+        button2.setTitle("Moya Promise", for: .normal)
         view.addSubview(button2)
-        button2.addTarget(self, action: #selector(sendAPI), for: .touchUpInside)
-
+        button2.rx.tap
+            .bind { [unowned self] in
+                self.moya_Promise()
+            }
+            .disposed(by: bag)
+        
+        let button3 = UIButton(type: .system)
+        button3.frame = .init(x: 100, y: 300, width: 250, height: 100)
+        button3.setTitle("AF Promise", for: .normal)
+        view.addSubview(button3)
+        button3.rx.tap
+            .bind { [unowned self] in
+                self.af_Promise()
+            }
+            .disposed(by: bag)
+        
+        
     }
 
     
@@ -53,23 +71,34 @@ class ViewController: UIViewController {
 
     }
     
-    @objc private func sendAPI() {
-        
-        
-        retryPromise(maximumRetryCount: 3, delayBeforeRetry: .seconds(5)) {
-            //return AFAPI.requestString(DeleteDelayAF.init(second: 7))
-            return API.requestPromise(DeleteDelayRequest.init(delayTime: 7))
-        }.done { data in
-            print(data)
-        }.catch { error in
-            print(error.localizedDescription)
-        }
-//        API.request(DeleteDelayRequest(delayTime: 7))
-//            .subscribe { response in
-//                print(response)
-//            } onError: { error in
-//                print(error.localizedDescription)
-//            }.disposed(by: bag)
+    private func moya_RX() {
+        API.request(DeleteDelayRequest.init(delayTime: 7))
+            .subscribe { result in
+                debugPrint("success")
+            } onError: { error in
+                debugPrint(error.localizedDescription)
+            }.disposed(by: bag)
+
+    }
+    
+    private func moya_Promise() {
+        API.requestRetryPromise(DeleteDelayRequest(delayTime: 7), maximumRetryCount: 5, delayBeforeRetry: .seconds(3))
+            .done { result in
+                debugPrint("success")
+            }
+            .catch { error in
+                debugPrint(error.localizedDescription)
+            }
+    }
+    
+    private func af_Promise() {
+        AFAPI.requestString(DeleteDelayAF.init(second: 7))
+            .done { _ in
+                debugPrint("success")
+            }
+            .catch { error in
+                debugPrint(error.localizedDescription)
+            }
     }
 
 }

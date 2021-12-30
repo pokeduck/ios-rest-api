@@ -824,7 +824,7 @@
 		9A0DE18B9482966264DD7B0A2A74C220 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = RxSwift/Observable.swift; sourceTree = "<group>"; };
 		9B25EA2B5BDA3FF992AA22B3418AFCFE /* curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = curry.swift; path = Source/Tools/curry.swift; sourceTree = "<group>"; };
 		9B848A04EAA262957EC41BD45DD08622 /* RxSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxSwift-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9E838C6C397D47F93C8640E71AEA25 /* PromiseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromiseKit-Info.plist"; sourceTree = "<group>"; };
 		9DC068D28D79EB8838F84D6E5CE1F21E /* NSTextStorage+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextStorage+Rx.swift"; path = "RxCocoa/iOS/NSTextStorage+Rx.swift"; sourceTree = "<group>"; };
 		9E0888A16014F31EFC34952917BBE54C /* BehaviorRelay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BehaviorRelay.swift; path = RxRelay/BehaviorRelay.swift; sourceTree = "<group>"; };
@@ -1267,6 +1267,7 @@
 				07B6769A8F53A37602EDF8392AB09697 /* CorePromise */,
 				1D7F19C8C0890D6528839F2E365E1B07 /* Support Files */,
 			);
+			name = PromiseKit;
 			path = PromiseKit;
 			sourceTree = "<group>";
 		};
@@ -1440,6 +1441,7 @@
 				C0E995C90B83E3DACA99DB71E502C18C /* Zip+Collection.swift */,
 				95BFE1CC9814667B6ACFB126F5135EB2 /* Support Files */,
 			);
+			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -1450,6 +1452,7 @@
 				B2398C9E243CB8735CC77ACE511E5A27 /* RxSwift */,
 				B6FD7029A2EE927707890E29FBF3DEB5 /* Support Files */,
 			);
+			name = Moya;
 			path = Moya;
 			sourceTree = "<group>";
 		};
@@ -1581,6 +1584,7 @@
 				10968A6161294B2BDE358CFD276EB14C /* WKWebView+Rx.swift */,
 				CDD0CC5661F9B7A2FEC5E76361AE243F /* Support Files */,
 			);
+			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1666,6 +1670,7 @@
 				087502A4D68BB62605BB2CB5DFF411EC /* Validation.swift */,
 				0788D4DC19A65E450D624ECAF1E96FA6 /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1741,6 +1746,7 @@
 				22269D3F6B4D5A83AB520BAF648F4703 /* RxCocoa */,
 				24522C91709088D4C4C9BA3612C4D24E /* Support Files */,
 			);
+			name = RxSwiftExt;
 			path = RxSwiftExt;
 			sourceTree = "<group>";
 		};
@@ -1768,6 +1774,7 @@
 				DB265EBF30C01A66F53E187BD6AAF07F /* Utils.swift */,
 				DB4890EBDE46F5C3C8943EA25C76360D /* Support Files */,
 			);
+			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -2015,7 +2022,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";

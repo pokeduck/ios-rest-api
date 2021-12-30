@@ -11,6 +11,7 @@ target 'ios-rest-api' do
   pod 'RxCocoa'
   pod 'RxSwiftExt', '~> 5'
   pod 'PromiseKit/CorePromise'
+  pod 'KeychainAccess'
 end
 
 post_install do |pi|

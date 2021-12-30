@@ -18,8 +18,8 @@ class MoyaAPIManager {
     private(set) var provider = MoyaProvider<MultiTarget>(
         session: MoyaAPIManager.defaultAlamofireSession(),
         plugins: [OAuthTokenPlugin(),
-                  DefaultConfigurationPligun(),
-                  NetworkMonitorPlugin()
+                  DefaultConfigurationPligun()//,
+                  //NetworkMonitorPlugin()
                  ])
     func suspendQueue() {
         requestQueue.suspend()
@@ -35,7 +35,6 @@ class MoyaAPIManager {
             .subscribeOn(MainScheduler.instance)
             .filter(statusCode: 200)
             .map(R.ResponseType.self)
-            .retry(5)
         return result
     }
     
@@ -43,15 +42,28 @@ class MoyaAPIManager {
 
 class AuthManager {
     static let shared = AuthManager()
-    var token: String = ""
+    var token: String = "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"
     var isValid: Bool {
         !token.isEmpty
     }
 }
+
+protocol MoyaAuthorizable {
+    var authorizeType: AuthorizeType { get }
+}
+
+enum AuthorizeType {
+    case none
+    case bearer
+}
 ///模仿 `AccessTokenPlugin`
 struct OAuthTokenPlugin: PluginType {
     public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
-
+        guard let t = target as? MoyaAuthorizable,
+              t.authorizeType == .bearer
+              else {
+            return request
+        }
         if !AuthManager.shared.isValid {
             return request
         }
@@ -63,7 +75,14 @@ struct OAuthTokenPlugin: PluginType {
         return request
     }
 }
-
+extension MultiTarget: MoyaAuthorizable {
+    var authorizeType: AuthorizeType {
+        guard let type = target as? MoyaAuthorizable else {
+            return .none
+        }
+        return type.authorizeType
+    }
+}
 ///Default Configuration
 struct DefaultConfigurationPligun: PluginType {
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
@@ -133,8 +152,8 @@ extension MoyaAPIManager {
 
     final class func defaultAlamofireSession() -> Session {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 3
-        configuration.timeoutIntervalForResource = 3
+        configuration.timeoutIntervalForRequest = 60
+        configuration.timeoutIntervalForResource = 60
         configuration.headers = .default
 
         return Session(configuration: configuration, startRequestsImmediately: false)
